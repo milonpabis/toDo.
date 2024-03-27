@@ -23,12 +23,16 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(600, 500)
-        MainWindow.setMinimumSize(QSize(600, 0))
+        MainWindow.resize(1000, 569)
+        MainWindow.setMinimumSize(QSize(600, 200))
+        MainWindow.setMaximumSize(QSize(1000, 1000))
+        MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setMinimumSize(QSize(500, 0))
-        self.centralwidget.setStyleSheet(u"")
+        self.centralwidget.setStyleSheet(u"#centralwidget {\n"
+"background-image: url(\"UI/images/todobg.jpg\");\n"
+"}")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -40,16 +44,21 @@ class Ui_MainWindow(object):
         self.frame.setFrameShape(QFrame.NoFrame)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame)
+        self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         font = QFont()
-        font.setFamilies([u"Sitka Text"])
+        font.setFamilies([u"Snap ITC"])
         font.setPointSize(48)
-        font.setBold(True)
+        font.setBold(False)
         self.label.setFont(font)
-        self.label.setStyleSheet(u"color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(218, 218, 189, 255), stop:1 rgba(198, 198, 172, 255));")
+        self.label.setStyleSheet(u"color: rgb(204, 167, 255);\n"
+"background-color: rgba(0, 0, 0, 90);\n"
+"")
         self.label.setAlignment(Qt.AlignCenter)
+        self.label.setWordWrap(False)
 
         self.horizontalLayout.addWidget(self.label)
 
@@ -68,25 +77,27 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.bt_add = QPushButton(self.frame_3)
         self.bt_add.setObjectName(u"bt_add")
-        self.bt_add.setMinimumSize(QSize(45, 45))
-        self.bt_add.setMaximumSize(QSize(45, 45))
+        self.bt_add.setMinimumSize(QSize(55, 40))
+        self.bt_add.setMaximumSize(QSize(55, 40))
         font1 = QFont()
         font1.setFamilies([u"MS PGothic"])
         font1.setPointSize(28)
         font1.setBold(False)
         self.bt_add.setFont(font1)
-        self.bt_add.setStyleSheet(u"QPushButton { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));\n"
-"border-radius: 10px;\n"
-"border: 1px solid black; }\n"
-"\n"
-"QPushButton:hover { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));\n"
-"border-radius: 20px;\n"
-"border: 1px solid black; }\n"
-"\n"
-"QPushButton:pressed {\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(218, 218, 189, 255), stop:1 rgba(198, 198, 172, 255));\n"
+        self.bt_add.setStyleSheet(u"QPushButton { \n"
+"background-color: rgb(204, 167, 255);\n"
+"border-radius: 15px;\n"
+"border: 2px solid black;\n"
 "}\n"
+"\n"
+"QPushButton:hover { \n"
+"background-color: rgb(204, 167, 180);\n"
+"border-radius: 10px;\n"
+"border: 2px solid black; }\n"
 "")
+        icon = QIcon()
+        icon.addFile(u"UI/images/plusicon.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.bt_add.setIcon(icon)
 
         self.horizontalLayout_2.addWidget(self.bt_add)
 
@@ -104,6 +115,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.listView = QListView(self.frame_widgets)
         self.listView.setObjectName(u"listView")
+        self.listView.setStyleSheet(u"background-color: rgba(254, 249, 255, 80);")
+        self.listView.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.listView.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.listView.setProperty("showDropIndicator", False)
         self.listView.setSelectionMode(QAbstractItemView.NoSelection)
@@ -130,6 +143,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"toDo.", None))
-        self.bt_add.setText(QCoreApplication.translate("MainWindow", u"+", None))
+        self.bt_add.setText("")
     # retranslateUi
 

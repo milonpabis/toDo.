@@ -26,7 +26,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.301, x2:1, y2:0.772727, stop:0.122222 rgba(234, 235, 204, 255), stop:0.127778 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));</string>
+   <string notr="true"/>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="spacing">
@@ -58,6 +58,11 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+background-color: rgba(0, 0, 0, 180);
+}</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -65,21 +70,33 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
       <property name="leftMargin">
-       <number>24</number>
+       <number>25</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
       </property>
       <item>
        <widget class="QCheckBox" name="check_done">
         <property name="minimumSize">
          <size>
-          <width>12</width>
-          <height>12</height>
+          <width>13</width>
+          <height>13</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>12</width>
-          <height>12</height>
+          <width>13</width>
+          <height>13</height>
          </size>
         </property>
         <property name="text">
@@ -87,8 +104,8 @@
         </property>
         <property name="iconSize">
          <size>
-          <width>16</width>
-          <height>16</height>
+          <width>32</width>
+          <height>32</height>
          </size>
         </property>
         <property name="tristate">
@@ -113,6 +130,11 @@
        <height>60</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+background-color: rgba(0, 0, 0, 180);
+}</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -124,32 +146,64 @@
        <number>0</number>
       </property>
       <property name="leftMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <property name="topMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <property name="rightMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <property name="bottomMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <item>
        <widget class="QStackedWidget" name="stacked_text">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 50);</string>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QLabel" name="l_text">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>35</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <family>Candara</family>
               <pointsize>10</pointsize>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(29, 29, 29, 170);
+color: rgb(204, 167, 255);
+border-radius: 3px;
+border: 1px solid rgb(204, 167, 255);
+
+</string>
             </property>
             <property name="text">
              <string/>
@@ -159,6 +213,9 @@
          </layout>
         </widget>
         <widget class="QWidget" name="page_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 50);</string>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QLineEdit" name="le_editext">
@@ -180,6 +237,15 @@
               <pointsize>10</pointsize>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+background-color: rgba(29, 29, 29, 170);
+color: rgb(204, 167, 255);
+border-radius: 3px;
+border: 1px solid rgb(204, 167, 255);
+ 
+</string>
             </property>
            </widget>
           </item>
@@ -204,6 +270,11 @@
        <height>60</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+background-color: rgba(0, 0, 0, 180);
+}</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -215,36 +286,31 @@
        <number>0</number>
       </property>
       <property name="leftMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <property name="topMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <property name="rightMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <property name="bottomMargin">
-       <number>6</number>
+       <number>3</number>
       </property>
       <item>
        <widget class="QStackedWidget" name="stacked_buttons">
         <property name="styleSheet">
-         <string>QPushButton { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
-border-radius: 8px;
-border: 1px solid black; }
-
-QPushButton:hover { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
-border-radius: 15px;
-border: 1px solid black; }
-
-QPushButton:pressed {
-background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(218, 218, 189, 255), stop:1 rgba(198, 198, 172, 255));
-}</string>
+         <string notr="true">
+</string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page_3">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 50);
+</string>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
            <widget class="QPushButton" name="bt_edit">
@@ -274,16 +340,18 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591,
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+             <string notr="true">QPushButton { 
+background-color: rgba(29, 29, 29, 170);
+color: rgb(204, 167, 255);
 border-radius: 8px;
-border: 1px solid black; }
+border: 1px solid rgb(204, 167, 255);
+ }
 
-QPushButton:hover { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+QPushButton:hover { 
+background-color: rgba(29, 29, 29, 150);
 border-radius: 15px;
-border: 1px solid black; }
-
-QPushButton:pressed {
-background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(218, 218, 189, 255), stop:1 rgba(198, 198, 172, 255));
+color: rgb(204, 167, 255);
+border: 1px solid rgb(204, 167, 255); 
 }</string>
             </property>
             <property name="text">
@@ -319,17 +387,19 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591,
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+             <string notr="true">QPushButton { 
+background-color: rgba(29, 29, 29, 170);
+color: rgb(204, 167, 255);
 border-radius: 8px;
-border: 1px solid black; }
+border: 1px solid rgb(204, 167, 255);
+ }
 
-QPushButton:hover { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+QPushButton:hover { 
+background-color: rgba(29, 29, 29, 150);
 border-radius: 15px;
-border: 1px solid black; }
-
-QPushButton:pressed {
-background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(218, 218, 189, 255), stop:1 rgba(198, 198, 172, 255));
-}</string>
+color: rgb(204, 167, 255);
+border: 1px solid rgb(204, 167, 255); }
+</string>
             </property>
             <property name="text">
              <string>Delete</string>
@@ -339,6 +409,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591,
          </layout>
         </widget>
         <widget class="QWidget" name="page_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 50);
+</string>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <item>
            <widget class="QPushButton" name="bt_cancel">
@@ -362,16 +436,18 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591,
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+             <string notr="true">QPushButton { 
+background-color: rgba(29, 29, 29, 170);
+color: rgb(204, 167, 255);
 border-radius: 8px;
-border: 1px solid black; }
+border: 1px solid rgb(204, 167, 255);
+ }
 
-QPushButton:hover { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+QPushButton:hover { 
+background-color: rgba(29, 29, 29, 150);
 border-radius: 15px;
-border: 1px solid black; }
-
-QPushButton:pressed {
-background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(218, 218, 189, 255), stop:1 rgba(198, 198, 172, 255));
+color: rgb(204, 167, 255);
+border: 1px solid rgb(204, 167, 255); 
 }</string>
             </property>
             <property name="text">
@@ -401,16 +477,18 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591,
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+             <string notr="true">QPushButton { 
+background-color: rgba(29, 29, 29, 170);
+color: rgb(204, 167, 255);
 border-radius: 8px;
-border: 1px solid black; }
+border: 1px solid rgb(204, 167, 255);
+ }
 
-QPushButton:hover { background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(234, 235, 204, 255), stop:1 rgba(218, 218, 189, 255));
+QPushButton:hover { 
+background-color: rgba(29, 29, 29, 150);
 border-radius: 15px;
-border: 1px solid black; }
-
-QPushButton:pressed {
-background-color: qlineargradient(spread:pad, x1:0, y1:0.193, x2:1, y2:0.721591, stop:0.1 rgba(218, 218, 189, 255), stop:1 rgba(198, 198, 172, 255));
+color: rgb(204, 167, 255);
+border: 1px solid rgb(204, 167, 255); 
 }</string>
             </property>
             <property name="text">
